@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>TODO App</h1>
+
+      <form action="/" method="post">
+        <div class="title">
+          <p>DESCRIPTION</p>
+          <input placeholder="What do you need to do?" name="description" />
+        </div>
+        <div class="details">
+          <div class="category">
+            <p>CATEGORY</p>
+            <select name="category">
+              <option value="">Choose a category</option>
+              <option value="Work">Work</option>
+              <option value="Home">Home</option>
+              <option value="Personal">Personal</option>
+            </select>
+          </div>
+          <div class="dueDate">
+            <p>DUE DATE</p>
+            <input type="date" name="date" />
+          </div>
+        </div>
+        <div class="actionButtons">
+          
+           
+            <button type="submit"> + ADD TASK</button>
+       
+            <button id="delete" type="button"> - DELETE TASKS</button>
+        
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

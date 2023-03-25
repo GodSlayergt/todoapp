@@ -1,0 +1,43 @@
+<%- include("header") -%>
+<div class="list">
+     
+    
+<form action="/delete" method="post" id="my-form">
+<% for(var i=0;i<newListItem.length;i++) { %>
+<div class="item">
+    <div class="left">
+        <input type="checkbox" name="checkbox" value="<%= newListItem[i]._id%>"/>
+        <span><%= newListItem[i].description %></span>
+        <p><%= newListItem[i].date %></p>
+        
+        
+    </div>
+
+    <% if (newListItem[i].category == 'Work') { %>
+        <<div class="right" style="background-color: blue;">
+            <%= newListItem[i].category %>
+        </div>
+      <% } else if (newListItem[i].category == 'Home') { %>
+        <div class="right" style="background-color: purple;">
+            <%= newListItem[i].category %>
+        </div>
+      <% } else { %>
+        <div class="right" style="background-color: greenyellow;">
+            <%= newListItem[i].category %>
+        </div>
+      <% } %>
+
+</div>
+<% } %>
+</form>
+
+<script>
+const submitBtn = document.getElementById('delete');
+const form = document.getElementById('my-form');
+
+submitBtn.addEventListener('click', () => {
+  form.submit();
+});
+</script>
+
+</div>
